@@ -20,7 +20,7 @@ module.exports = function (app, passport) {
 
 	function getNatural(date) {
 		var naturalMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-		if (typeof date === 'undefined')
+		if (typeof date == 'undefined')
 			return null;
 			
 		return naturalMonths[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
