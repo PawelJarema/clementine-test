@@ -20,6 +20,9 @@ module.exports = function (app, passport) {
 
 	function getNatural(date) {
 		var naturalMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+		if (typeof date === 'undefined')
+			return null;
+			
 		return naturalMonths[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
 	}
 	
@@ -39,10 +42,8 @@ module.exports = function (app, passport) {
 	
 	app.route('/').get(function(req, res) {
 		res.send('Hi guy! Send date via url, f.ex.:<br>' +
-		'https://timestamp-ms.herokuapp.com/December%2015,%202015<br>' +
-		'https://timestamp-ms.herokuapp.com/1450137600<br>' +
-		'https://free-code-camp-back-end-clementine-paweljarema.c9users.io/December%2015,%202015<br>' +
-		'https://free-code-camp-back-end-clementine-paweljarema.c9users.io/1450137600');
+		'https://clementinedates.herokuapp.com/December%2015,%202015<br>' +
+		'https://clementinedates.herokuapp.com/1450137600');
 	});
 	
 	app.route('/*').get(function(req, res) {
