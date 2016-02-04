@@ -38,7 +38,7 @@ module.exports = function (app, passport) {
 	// 	});
 	
 	app.route('/').get(function(req, res) {
-		res.send('Hi guy! Please, send date via url query, f.ex.:<br>' +
+		res.send('Hi guy! Send date via url, f.ex.:<br>' +
 		'https://timestamp-ms.herokuapp.com/December%2015,%202015<br>' +
 		'https://timestamp-ms.herokuapp.com/1450137600<br>' +
 		'https://free-code-camp-back-end-clementine-paweljarema.c9users.io/December%2015,%202015<br>' +
